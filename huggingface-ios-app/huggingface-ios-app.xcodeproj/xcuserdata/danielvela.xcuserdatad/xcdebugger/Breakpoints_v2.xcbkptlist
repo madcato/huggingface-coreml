@@ -3,4 +3,165 @@
    uuid = "35749A31-DE64-40ED-AEFF-0F87C3A968E5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "testModelPredict()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_appTests.BlenderbotTokenizerTests.testModelPredict() -&gt; ()"
+                  moduleName = "huggingface-ios-appTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+               <Location
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_appTests.BlenderbotTokenizerTests.testModelPredict() -&gt; ()"
+                  moduleName = "huggingface-ios-appTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "2640">
+               </Location>
+               <Location
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_appTests.BlenderbotTokenizerTests.testModelPredict() -&gt; ()"
+                  moduleName = "huggingface-ios-appTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1888">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/BlenderbotTokenizer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "byteEncode(text:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A - 8f18ef0fb19316df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_app.BlenderbotTokenizer.byteEncode(text: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "huggingface-ios-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/Sources/BlenderbotTokenizer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A - 4ad0406431453d9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Range&lt;Swift.String.Index&gt;) -&gt; Swift.String in huggingface_ios_app.BlenderbotTokenizer.byteEncode(text: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "huggingface-ios-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/Sources/BlenderbotTokenizer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E6ECEB1-921A-4755-8EBA-E67F22F244D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "huggingface-ios-appTests/Distilgpt2Tests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "testModelPredict()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E6ECEB1-921A-4755-8EBA-E67F22F244D4 - e69a2ce5b0d0d4cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_appTests.DistilGPT2TokenizerTests.testModelPredict() -&gt; ()"
+                  moduleName = "huggingface-ios-appTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/Distilgpt2Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "7E6ECEB1-921A-4755-8EBA-E67F22F244D4 - e69a2ce5b0d0d4ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "huggingface_ios_appTests.DistilGPT2TokenizerTests.testModelPredict() -&gt; ()"
+                  moduleName = "huggingface-ios-appTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/Distilgpt2Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
