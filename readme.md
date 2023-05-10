@@ -17,3 +17,11 @@ This repository contains a script and information to convert a Huggingface model
 - [Deploying Transformers on the Apple Neural Engine](https://machinelearning.apple.com/research/neural-engine-transformers)
 - [Swift app demonstrating Core ML Stable Diffusion](https://github.com/huggingface/swift-coreml-diffusers)
 - [Apple Core ML](https://developer.apple.com/documentation/coreml)
+
+## Initial steps
+
+1. Execute chatbot to download model, `$ python3 try.py`
+2. Install huggingface exporters, `$ git clone https://github.com/huggingface/exporters.git`
+3. `$ cd exporters && pip3 install -e .`
+4. `$ cd ..`
+5. `python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill exported/ --feature=text2text-generation`

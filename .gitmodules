@@ -1,0 +1,3 @@
+[submodule "exporters"]
+	path = exporters
+	url = https://github.com/huggingface/exporters.git
