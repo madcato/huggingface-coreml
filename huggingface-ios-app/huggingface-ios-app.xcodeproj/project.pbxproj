@@ -14,20 +14,14 @@
 		0BB76E942A0B9E6D000D9187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E932A0B9E6D000D9187 /* Assets.xcassets */; };
 		0BB76E972A0B9E6D000D9187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E952A0B9E6D000D9187 /* LaunchScreen.storyboard */; };
 		0BB76EA22A0B9E6D000D9187 /* huggingface_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EA12A0B9E6D000D9187 /* huggingface_ios_appTests.swift */; };
-		0BB76EAC2A0B9E6D000D9187 /* huggingface_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EAB2A0B9E6D000D9187 /* huggingface_ios_appUITests.swift */; };
-		0BB76EAE2A0B9E6D000D9187 /* huggingface_ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EAD2A0B9E6D000D9187 /* huggingface_ios_appUITestsLaunchTests.swift */; };
 		0BB76EBC2A0B9F0A000D9187 /* BlenderbotTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */; };
+		0BB76ECB2A0BA673000D9187 /* facebook in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76ECA2A0BA673000D9187 /* facebook */; };
+		0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ECC2A0BA68E000D9187 /* Utils.swift */; };
+		0BB76ECF2A0BA70F000D9187 /* BlenderbotTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ECE2A0BA70F000D9187 /* BlenderbotTokenizerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0BB76E9E2A0B9E6D000D9187 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BB76E7F2A0B9E6C000D9187 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BB76E862A0B9E6C000D9187;
-			remoteInfo = "huggingface-ios-app";
-		};
-		0BB76EA82A0B9E6D000D9187 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BB76E7F2A0B9E6C000D9187 /* Project object */;
 			proxyType = 1;
@@ -47,10 +41,10 @@
 		0BB76E982A0B9E6D000D9187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BB76E9D2A0B9E6D000D9187 /* huggingface-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "huggingface-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB76EA12A0B9E6D000D9187 /* huggingface_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huggingface_ios_appTests.swift; sourceTree = "<group>"; };
-		0BB76EA72A0B9E6D000D9187 /* huggingface-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "huggingface-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BB76EAB2A0B9E6D000D9187 /* huggingface_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huggingface_ios_appUITests.swift; sourceTree = "<group>"; };
-		0BB76EAD2A0B9E6D000D9187 /* huggingface_ios_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huggingface_ios_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderbotTokenizer.swift; sourceTree = "<group>"; };
+		0BB76ECA2A0BA673000D9187 /* facebook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = facebook; sourceTree = "<group>"; };
+		0BB76ECC2A0BA68E000D9187 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0BB76ECE2A0BA70F000D9187 /* BlenderbotTokenizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderbotTokenizerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,23 +62,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BB76EA42A0B9E6D000D9187 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0BB76E7E2A0B9E6C000D9187 = {
 			isa = PBXGroup;
 			children = (
+				0BB76EBD2A0BA40F000D9187 /* Resources */,
 				0BB76EBA2A0B9EF1000D9187 /* Sources */,
 				0BB76E892A0B9E6C000D9187 /* huggingface-ios-app */,
 				0BB76EA02A0B9E6D000D9187 /* huggingface-ios-appTests */,
-				0BB76EAA2A0B9E6D000D9187 /* huggingface-ios-appUITests */,
 				0BB76E882A0B9E6C000D9187 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +81,6 @@
 			children = (
 				0BB76E872A0B9E6C000D9187 /* huggingface-ios-app.app */,
 				0BB76E9D2A0B9E6D000D9187 /* huggingface-ios-appTests.xctest */,
-				0BB76EA72A0B9E6D000D9187 /* huggingface-ios-appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,25 +103,34 @@
 			isa = PBXGroup;
 			children = (
 				0BB76EA12A0B9E6D000D9187 /* huggingface_ios_appTests.swift */,
+				0BB76ECE2A0BA70F000D9187 /* BlenderbotTokenizerTests.swift */,
 			);
 			path = "huggingface-ios-appTests";
-			sourceTree = "<group>";
-		};
-		0BB76EAA2A0B9E6D000D9187 /* huggingface-ios-appUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0BB76EAB2A0B9E6D000D9187 /* huggingface_ios_appUITests.swift */,
-				0BB76EAD2A0B9E6D000D9187 /* huggingface_ios_appUITestsLaunchTests.swift */,
-			);
-			path = "huggingface-ios-appUITests";
 			sourceTree = "<group>";
 		};
 		0BB76EBA2A0B9EF1000D9187 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0BB76ECC2A0BA68E000D9187 /* Utils.swift */,
 				0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		0BB76EBD2A0BA40F000D9187 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BB76EBE2A0BA424000D9187 /* models */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0BB76EBE2A0BA424000D9187 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0BB76ECA2A0BA673000D9187 /* facebook */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,24 +171,6 @@
 			productReference = 0BB76E9D2A0B9E6D000D9187 /* huggingface-ios-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0BB76EA62A0B9E6D000D9187 /* huggingface-ios-appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0BB76EB72A0B9E6D000D9187 /* Build configuration list for PBXNativeTarget "huggingface-ios-appUITests" */;
-			buildPhases = (
-				0BB76EA32A0B9E6D000D9187 /* Sources */,
-				0BB76EA42A0B9E6D000D9187 /* Frameworks */,
-				0BB76EA52A0B9E6D000D9187 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BB76EA92A0B9E6D000D9187 /* PBXTargetDependency */,
-			);
-			name = "huggingface-ios-appUITests";
-			productName = "huggingface-ios-appUITests";
-			productReference = 0BB76EA72A0B9E6D000D9187 /* huggingface-ios-appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,10 +185,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					0BB76E9C2A0B9E6D000D9187 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 0BB76E862A0B9E6C000D9187;
-					};
-					0BB76EA62A0B9E6D000D9187 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 0BB76E862A0B9E6C000D9187;
 					};
@@ -232,7 +205,6 @@
 			targets = (
 				0BB76E862A0B9E6C000D9187 /* huggingface-ios-app */,
 				0BB76E9C2A0B9E6D000D9187 /* huggingface-ios-appTests */,
-				0BB76EA62A0B9E6D000D9187 /* huggingface-ios-appUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,18 +216,12 @@
 			files = (
 				0BB76E972A0B9E6D000D9187 /* LaunchScreen.storyboard in Resources */,
 				0BB76E942A0B9E6D000D9187 /* Assets.xcassets in Resources */,
+				0BB76ECB2A0BA673000D9187 /* facebook in Resources */,
 				0BB76E922A0B9E6C000D9187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0BB76E9B2A0B9E6D000D9187 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BB76EA52A0B9E6D000D9187 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */,
 				0BB76EBC2A0B9F0A000D9187 /* BlenderbotTokenizer.swift in Sources */,
 				0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */,
 				0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */,
@@ -280,16 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB76ECF2A0BA70F000D9187 /* BlenderbotTokenizerTests.swift in Sources */,
 				0BB76EA22A0B9E6D000D9187 /* huggingface_ios_appTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BB76EA32A0B9E6D000D9187 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BB76EAC2A0B9E6D000D9187 /* huggingface_ios_appUITests.swift in Sources */,
-				0BB76EAE2A0B9E6D000D9187 /* huggingface_ios_appUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,11 +259,6 @@
 			isa = PBXTargetDependency;
 			target = 0BB76E862A0B9E6C000D9187 /* huggingface-ios-app */;
 			targetProxy = 0BB76E9E2A0B9E6D000D9187 /* PBXContainerItemProxy */;
-		};
-		0BB76EA92A0B9E6D000D9187 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BB76E862A0B9E6C000D9187 /* huggingface-ios-app */;
-			targetProxy = 0BB76EA82A0B9E6D000D9187 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,42 +492,6 @@
 			};
 			name = Release;
 		};
-		0BB76EB82A0B9E6D000D9187 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TW65EXAM4U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.veladan.huggingface-ios-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "huggingface-ios-app";
-			};
-			name = Debug;
-		};
-		0BB76EB92A0B9E6D000D9187 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TW65EXAM4U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.veladan.huggingface-ios-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "huggingface-ios-app";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -600,15 +518,6 @@
 			buildConfigurations = (
 				0BB76EB52A0B9E6D000D9187 /* Debug */,
 				0BB76EB62A0B9E6D000D9187 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0BB76EB72A0B9E6D000D9187 /* Build configuration list for PBXNativeTarget "huggingface-ios-appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0BB76EB82A0B9E6D000D9187 /* Debug */,
-				0BB76EB92A0B9E6D000D9187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -30,3 +30,34 @@ This repository contains a script and information to convert a Huggingface model
 4. `python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill exported/ --feature=text2text-generation`
 
 The last step will create an `mlpackage` file in the `exported` folder. This file can be opened with Xcode and the model can be tested in the playground or project.
+
+## Exporters features
+
+- 'feature-extraction', 
+- 'feature-extraction-with-past', 
+- 'fill-mask', 
+- 'image-classification', 
+- 'masked-im', 
+- 'multiple-choice', 
+- 'next-sentence-prediction', 
+- 'object-detection', 
+- 'question-answering', 
+- 'semantic-segmentation', 
+- 'text-classification', 
+- 'text-generation', 
+- 'text-generation-with-past', 
+- 'text2text-generation', 
+- 'token-classification', 
+- 'sequence-classification', 
+- 'causal-lm', 
+- 'causal-lm-with-past', 
+- 'seq2seq-lm', 
+- 'seq2seq-lm-with-past', 
+- 'speech2seq-lm', 
+- 'speech2seq-lm-with-past', 
+- 'masked-lm', 
+- 'vision2seq-lm', 
+- 'default', 
+- 'default-with-past', 
+- 'automatic-speech-recognition', 
+- 'ctc'

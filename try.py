@@ -6,12 +6,13 @@ def get_models():
     model_name = "facebook/blenderbot-400M-distill"
     # model_name = "facebook/blenderbot-1B-distill"
     # model_name = "facebook/blenderbot-90M"
-    tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
+    tokenizer = BlenderbotTokenizer.from_pretrained(model_name, cache_dir="./models")
     model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
     return tokenizer, model
 
 def generate_answer():
     tokenizer, model = get_models()
+    print(tokenizer(" Hello world")["input_ids"])
     # Ask user for input from command line
     user_message = input(">> ")
     inputs = tokenizer(user_message, return_tensors="pt")
