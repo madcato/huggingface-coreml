@@ -6,7 +6,7 @@ def get_models():
     model_name = "facebook/blenderbot-400M-distill"
     # model_name = "facebook/blenderbot-1B-distill"
     # model_name = "facebook/blenderbot-90M"
-    tokenizer = BlenderbotTokenizer.from_pretrained(model_name, cache_dir="./models")
+    tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
     model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
     return tokenizer, model
 
