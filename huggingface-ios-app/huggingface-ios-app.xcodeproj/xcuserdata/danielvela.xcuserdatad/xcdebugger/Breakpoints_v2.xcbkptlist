@@ -14,13 +14,13 @@
             filePath = "huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "testModelPredict()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a421"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1980">
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1240">
                </Location>
                <Location
-                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a421"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,12 +45,12 @@
                   urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "2640">
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1904">
                </Location>
                <Location
-                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4c2"
+                  uuid = "D75F9EE9-4726-4C61-9E9F-01219746D401 - 8710866b3262a4e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -60,57 +60,9 @@
                   urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/huggingface-ios-appTests/BlenderbotTokenizerTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1888">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/BlenderbotTokenizer.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "byteEncode(text:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A - 8f18ef0fb19316df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "huggingface_ios_app.BlenderbotTokenizer.byteEncode(text: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "huggingface-ios-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/Sources/BlenderbotTokenizer.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "036963DD-6DD1-4981-8478-8B5116E7FA4A - 4ad0406431453d9b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Range&lt;Swift.String.Index&gt;) -&gt; Swift.String in huggingface_ios_app.BlenderbotTokenizer.byteEncode(text: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "huggingface-ios-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielvela/projects/huggingface-coreml/huggingface-ios-app/Sources/BlenderbotTokenizer.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1060">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -161,6 +113,38 @@
                   offsetFromSymbolStart = "1412">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02D12C78-9BF3-4C4C-BB22-AF6D70C0FFB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/DistilGPT2Tokenizer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "byteEncode(text:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1716D246-E639-44A1-8AA4-EAB37B711364"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/BlenderbotTokenizer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "byteEncode(text:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
