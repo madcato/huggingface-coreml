@@ -1,5 +1,5 @@
 //
-//  BlenderbotTokenizerTests.swift
+//  DistilGPT2TokenizerTests.swift
 //  huggingface-ios-appTests
 //
 //  Created by Daniel Vela on 10/5/23.

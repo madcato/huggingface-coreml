@@ -23,13 +23,13 @@ This repository contains a script and information to convert a Huggingface model
 ## Initial steps
 
 0. Clone repo: `$ git clone https://github.com/madcato/huggingface-coreml.git`
-1. Execute chatbot to download model, `$ python3 try.py`
+1. Execute chatbot to try chatbot (optional), `$ python3 try.py`
 2. Install huggingface exporters submodule, 
     `$ git submodule init && git submodule update`
 3. `$ cd exporters && pip3 install -e . && cd ..`
-4. `python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill exported/ --feature=text2text-generation`
+4. `python3 export`
 
-The last step will create an `mlpackage` file in the `exported` folder. This file can be opened with Xcode and the model can be tested in the playground or project.
+The last step will create two `mlpackage` files in the `exported` folder: one for decoder and another for decoder part of the model. These files can be opened with Xcode and the model can be tested in the playground or project.
 
 ## Exporters features
 

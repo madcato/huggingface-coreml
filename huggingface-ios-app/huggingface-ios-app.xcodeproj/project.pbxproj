@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B12B54A2A0C24A5008A2E20 /* blenderbot-400M-distill.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0B12B5492A0C24A5008A2E20 /* blenderbot-400M-distill.mlpackage */; };
 		0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8A2A0B9E6C000D9187 /* AppDelegate.swift */; };
 		0BB76E8D2A0B9E6C000D9187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8C2A0B9E6C000D9187 /* SceneDelegate.swift */; };
 		0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8E2A0B9E6C000D9187 /* ViewController.swift */; };
 		0BB76E922A0B9E6C000D9187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E902A0B9E6C000D9187 /* Main.storyboard */; };
 		0BB76E942A0B9E6D000D9187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E932A0B9E6D000D9187 /* Assets.xcassets */; };
 		0BB76E972A0B9E6D000D9187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E952A0B9E6D000D9187 /* LaunchScreen.storyboard */; };
-		0BB76EBC2A0B9F0A000D9187 /* BlenderbotTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */; };
 		0BB76ECB2A0BA673000D9187 /* facebook in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76ECA2A0BA673000D9187 /* facebook */; };
 		0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ECC2A0BA68E000D9187 /* Utils.swift */; };
 		0BB76ED62A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED52A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift */; };
-		0BB76ED82A0BEF22000D9187 /* MLMultiArray+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED72A0BEF22000D9187 /* MLMultiArray+Utils.swift */; };
 		0BB76EDA2A0C14D4000D9187 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED92A0C14D4000D9187 /* Math.swift */; };
 		0BB76EE02A0C190C000D9187 /* Distilgpt2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EDF2A0C190C000D9187 /* Distilgpt2Tests.swift */; };
 		0BB76EE32A0C19B2000D9187 /* distilgpt2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */; };
 		0BB76EE42A0C19B7000D9187 /* DistilGPT2Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EE12A0C1941000D9187 /* DistilGPT2Tokenizer.swift */; };
 		0BB76EE52A0C1A80000D9187 /* distilgpt2 in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76EDB2A0C18D2000D9187 /* distilgpt2 */; };
+		0BBD4C272A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C252A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage */; };
+		0BBD4C282A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C262A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage */; };
+		0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C292A0CBD340090AE8F /* BlenderbotSmallModel.swift */; };
+		0BBD4C2B2A0CC6F50090AE8F /* MLMultiArray+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED72A0BEF22000D9187 /* MLMultiArray+Utils.swift */; };
+		0BBD4C2C2A0CC7000090AE8F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED92A0C14D4000D9187 /* Math.swift */; };
+		0BDB56E52A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */; };
+		0BDB56E82A0E172900415AB0 /* bart-large_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E62A0E172900415AB0 /* bart-large_decoder.mlpackage */; };
+		0BDB56E92A0E172900415AB0 /* bart-large_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */; };
+		0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EA2A0E174600415AB0 /* BartModel.swift */; };
+		0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B12B5492A0C24A5008A2E20 /* blenderbot-400M-distill.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "blenderbot-400M-distill.mlpackage"; sourceTree = "<group>"; };
 		0BB76E872A0B9E6C000D9187 /* huggingface-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "huggingface-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB76E8A2A0B9E6C000D9187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BB76E8C2A0B9E6C000D9187 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,16 +53,23 @@
 		0BB76E962A0B9E6D000D9187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BB76E982A0B9E6D000D9187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BB76E9D2A0B9E6D000D9187 /* huggingface-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "huggingface-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderbotTokenizer.swift; sourceTree = "<group>"; };
 		0BB76ECA2A0BA673000D9187 /* facebook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = facebook; sourceTree = "<group>"; };
-		0BB76ECC2A0BA68E000D9187 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0BB76ECC2A0BA68E000D9187 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BB76ED52A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlenderbotTokenizerTests.swift; sourceTree = "<group>"; };
 		0BB76ED72A0BEF22000D9187 /* MLMultiArray+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Utils.swift"; sourceTree = "<group>"; };
 		0BB76ED92A0C14D4000D9187 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		0BB76EDB2A0C18D2000D9187 /* distilgpt2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = distilgpt2; sourceTree = "<group>"; };
 		0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = distilgpt2.mlpackage; sourceTree = "<group>"; };
 		0BB76EDF2A0C190C000D9187 /* Distilgpt2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distilgpt2Tests.swift; sourceTree = "<group>"; };
-		0BB76EE12A0C1941000D9187 /* DistilGPT2Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistilGPT2Tokenizer.swift; sourceTree = "<group>"; };
+		0BB76EE12A0C1941000D9187 /* DistilGPT2Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilGPT2Tokenizer.swift; sourceTree = "<group>"; };
+		0BBD4C252A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "blenderbot_small-90M_encoder.mlpackage"; sourceTree = "<group>"; };
+		0BBD4C262A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "blenderbot_small-90M_decoder.mlpackage"; sourceTree = "<group>"; };
+		0BBD4C292A0CBD340090AE8F /* BlenderbotSmallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlenderbotSmallModel.swift; sourceTree = "<group>"; };
+		0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderbotSmallTokenizer.swift; sourceTree = "<group>"; };
+		0BDB56E62A0E172900415AB0 /* bart-large_decoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "bart-large_decoder.mlpackage"; sourceTree = "<group>"; };
+		0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "bart-large_encoder.mlpackage"; sourceTree = "<group>"; };
+		0BDB56EA2A0E174600415AB0 /* BartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartModel.swift; sourceTree = "<group>"; };
+		0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartTokenizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +138,12 @@
 			children = (
 				0BB76ED92A0C14D4000D9187 /* Math.swift */,
 				0BB76ECC2A0BA68E000D9187 /* Utils.swift */,
-				0BB76EBB2A0B9F0A000D9187 /* BlenderbotTokenizer.swift */,
 				0BB76ED72A0BEF22000D9187 /* MLMultiArray+Utils.swift */,
+				0BBD4C292A0CBD340090AE8F /* BlenderbotSmallModel.swift */,
 				0BB76EE12A0C1941000D9187 /* DistilGPT2Tokenizer.swift */,
+				0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */,
+				0BDB56EA2A0E174600415AB0 /* BartModel.swift */,
+				0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,8 +159,11 @@
 		0BB76EBE2A0BA424000D9187 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				0B12B5492A0C24A5008A2E20 /* blenderbot-400M-distill.mlpackage */,
+				0BDB56E62A0E172900415AB0 /* bart-large_decoder.mlpackage */,
+				0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */,
 				0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */,
+				0BBD4C262A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage */,
+				0BBD4C252A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage */,
 				0BB76EDB2A0C18D2000D9187 /* distilgpt2 */,
 				0BB76ECA2A0BA673000D9187 /* facebook */,
 			);
@@ -254,14 +273,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */,
 				0BB76EE32A0C19B2000D9187 /* distilgpt2.mlpackage in Sources */,
+				0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */,
 				0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */,
-				0BB76EBC2A0B9F0A000D9187 /* BlenderbotTokenizer.swift in Sources */,
+				0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */,
 				0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */,
+				0BBD4C2B2A0CC6F50090AE8F /* MLMultiArray+Utils.swift in Sources */,
+				0BDB56E82A0E172900415AB0 /* bart-large_decoder.mlpackage in Sources */,
+				0BBD4C272A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage in Sources */,
 				0BB76EE42A0C19B7000D9187 /* DistilGPT2Tokenizer.swift in Sources */,
 				0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */,
+				0BDB56E52A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift in Sources */,
+				0BBD4C282A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage in Sources */,
+				0BDB56E92A0E172900415AB0 /* bart-large_encoder.mlpackage in Sources */,
 				0BB76E8D2A0B9E6C000D9187 /* SceneDelegate.swift in Sources */,
-				0B12B54A2A0C24A5008A2E20 /* blenderbot-400M-distill.mlpackage in Sources */,
+				0BBD4C2C2A0CC7000090AE8F /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB76ED82A0BEF22000D9187 /* MLMultiArray+Utils.swift in Sources */,
 				0BB76ED62A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift in Sources */,
 				0BB76EDA2A0C14D4000D9187 /* Math.swift in Sources */,
 				0BB76EE02A0C190C000D9187 /* Distilgpt2Tests.swift in Sources */,

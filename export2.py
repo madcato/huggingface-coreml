@@ -1,17 +1,17 @@
 from exporters.coreml import export
-from exporters.coreml.models import BlenderbotSmallCoreMLConfig
-from transformers import BlenderbotSmallTokenizer
-from transformers import BlenderbotSmallForConditionalGeneration
+from exporters.coreml.models import BartCoreMLConfig
+from transformers import BartTokenizer
+from transformers import BartForConditionalGeneration
 
-model_ckpt = "facebook/blenderbot_small-90M"
+model_ckpt = "facebook/bart-large"
 
-base_model = BlenderbotSmallForConditionalGeneration.from_pretrained(
+base_model = BartForConditionalGeneration.from_pretrained(
     model_ckpt, torchscript=True
 )
-preprocessor = BlenderbotSmallTokenizer.from_pretrained(model_ckpt)
+preprocessor = BartTokenizer.from_pretrained(model_ckpt)
 
 # Encoder
-coreml_config = BlenderbotSmallCoreMLConfig(
+coreml_config = BartCoreMLConfig(
     base_model.config, 
     task="text2text-generation",
     use_past=False,
@@ -24,7 +24,7 @@ mlmodel = export(
 mlmodel.save(f"exported/{model_ckpt}_encoder.mlpackage")
 
 # Decoder
-coreml_config = BlenderbotSmallCoreMLConfig(
+coreml_config = BartCoreMLConfig(
     base_model.config, 
     task="text2text-generation",
     use_past=False,
