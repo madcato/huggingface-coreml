@@ -6,6 +6,15 @@ import os
 import regex as re
 from transformers import logging
 
+##  "bos_token_id": 1,
+# "decoder_start_token_id": 1,
+#  "eos_token_id": 2,
+#    "forced_eos_token_id": 2,
+#  "pad_token_id": 0,
+#   "unk_token_id": 3,
+#
+#
+#
 
 logger = logging.get_logger(__name__)
 

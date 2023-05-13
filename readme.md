@@ -31,6 +31,11 @@ This repository contains a script and information to convert a Huggingface model
 
 The last step will create two `mlpackage` files in the `exported` folder: one for decoder and another for decoder part of the model. These files can be opened with Xcode and the model can be tested in the playground or project.
 
+### Try
+
+- `$ python3 -m exporters.coreml --model=t5-small --feature=text2text-generation exported`
+- `$ python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill --feature=text2text-generation exported`
+
 ## Exporters features
 
 - 'feature-extraction', 

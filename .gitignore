@@ -1,6 +1,6 @@
 /models
 /exported
-
+/huggingface-ios-app/Resources/models
 
 ## User settings
 xcuserdata/
@@ -10,3 +10,4 @@ xcuserdata/
 *.xccheckout
 
 *.mlpackage
+

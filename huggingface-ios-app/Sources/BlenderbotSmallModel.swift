@@ -22,7 +22,8 @@ class BlenderbotSmallModel {
     }
     
     func predict(_ string: String) throws -> String {
-        let tokens = tokenizer.encode(text: string)
+        let tokens_0 = tokenizer.encode(text: string)
+        let tokens = [1] + tokens_0 + [2]
         
         let maxTokens = (tokens.count > seqLen)
             ? Array(tokens[..<seqLen])
