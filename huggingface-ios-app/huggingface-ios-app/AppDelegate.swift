@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         do {
-            try BlenderbotSmallModel().predict("Hello world how are you")
+            try T5SmallModel().predict("Hello world how are you")
         } catch {
             print(error.localizedDescription)
         }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB0CB182A0F93C500348B1C /* decoder_t5_small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0CB162A0F93C500348B1C /* decoder_t5_small.mlpackage */; };
+		0BB0CB192A0F93C500348B1C /* encoder_t5_small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0CB172A0F93C500348B1C /* encoder_t5_small.mlpackage */; };
+		0BB0CB1B2A0F93ED00348B1C /* T5SmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0CB1A2A0F93ED00348B1C /* T5SmallModel.swift */; };
 		0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8A2A0B9E6C000D9187 /* AppDelegate.swift */; };
 		0BB76E8D2A0B9E6C000D9187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8C2A0B9E6C000D9187 /* SceneDelegate.swift */; };
 		0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8E2A0B9E6C000D9187 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB0CB162A0F93C500348B1C /* decoder_t5_small.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = decoder_t5_small.mlpackage; sourceTree = "<group>"; };
+		0BB0CB172A0F93C500348B1C /* encoder_t5_small.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = encoder_t5_small.mlpackage; sourceTree = "<group>"; };
+		0BB0CB1A2A0F93ED00348B1C /* T5SmallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T5SmallModel.swift; sourceTree = "<group>"; };
 		0BB76E872A0B9E6C000D9187 /* huggingface-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "huggingface-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB76E8A2A0B9E6C000D9187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BB76E8C2A0B9E6C000D9187 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */,
 				0BDB56EA2A0E174600415AB0 /* BartModel.swift */,
 				0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */,
+				0BB0CB1A2A0F93ED00348B1C /* T5SmallModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 		0BB76EBE2A0BA424000D9187 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				0BB0CB162A0F93C500348B1C /* decoder_t5_small.mlpackage */,
+				0BB0CB172A0F93C500348B1C /* encoder_t5_small.mlpackage */,
 				0BDB56E62A0E172900415AB0 /* bart-large_decoder.mlpackage */,
 				0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */,
 				0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */,
@@ -276,11 +285,14 @@
 				0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */,
 				0BB76EE32A0C19B2000D9187 /* distilgpt2.mlpackage in Sources */,
 				0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */,
+				0BB0CB182A0F93C500348B1C /* decoder_t5_small.mlpackage in Sources */,
 				0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */,
+				0BB0CB192A0F93C500348B1C /* encoder_t5_small.mlpackage in Sources */,
 				0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */,
 				0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */,
 				0BBD4C2B2A0CC6F50090AE8F /* MLMultiArray+Utils.swift in Sources */,
 				0BDB56E82A0E172900415AB0 /* bart-large_decoder.mlpackage in Sources */,
+				0BB0CB1B2A0F93ED00348B1C /* T5SmallModel.swift in Sources */,
 				0BBD4C272A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage in Sources */,
 				0BB76EE42A0C19B7000D9187 /* DistilGPT2Tokenizer.swift in Sources */,
 				0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */,

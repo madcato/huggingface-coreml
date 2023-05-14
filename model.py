@@ -1304,7 +1304,7 @@ class BlenderbotSmallForConditionalGeneration(BlenderbotSmallPreTrainedModel):
                 decoder_input_ids = shift_tokens_right(
                     labels, self.config.pad_token_id, self.config.decoder_start_token_id
                 )
-        print(decoder_input_ids)
+        
         outputs = self.model(
             input_ids,
             attention_mask=attention_mask,
