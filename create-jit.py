@@ -4,13 +4,14 @@ from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM
 
 
 # Load "microsoft/DialoGPT-small"
-torch_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small", torchscript=True)
+# torch_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small", torchscript=True)
+torch_model = AutoModelForCausalLM.from_pretrained("facebook/blenderbot_small-90M", torchscript=True)
 # Set the model in evaluation mode.
 torch_model.eval()
 
 # Trace the model with random data.
 # tensor of random ints
-example_input = torch.randint(0, 100, (64, ), dtype=torch.int64)
+example_input = torch.randint(0, 100, (1,128), dtype=torch.int64)
 print(example_input.shape)
 print(example_input)
 traced_model = torch.jit.trace(torch_model, example_input)
@@ -36,9 +37,9 @@ input_shape = ct.Shape(shape=(1,
 model = ct.convert(
     traced_model,
     inputs=[ct.TensorType(shape=example_input.shape, name="input")],
-    outputs=[ct.TensorType(name="output")],
+    # outputs=[ct.TensorType(name="output")],
     convert_to="mlprogram"
  )
 
 # Save the converted model.
-model.save("exported/microsoft/DialoGPT-small.mlpackage")
+model.save("exported/facebook/blenderbot_small-90M.mlpackage")
