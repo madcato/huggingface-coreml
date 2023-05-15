@@ -19,6 +19,7 @@ This repository contains a script and information to convert a Huggingface model
 - [Apple Core ML](https://developer.apple.com/documentation/coreml)
 -[BenderbotTokenizer doc](https://huggingface.co/docs/transformers/model_doc/blenderbot#transformers.BlenderbotTokenizer)
 - [BenderbotTokenizer implementation](https://github.com/huggingface/transformers/blob/3335724376319a0c453049d0cd883504f530ff52/src/transformers/models/blenderbot/tokenization_blenderbot.py#L4)
+- https://huggingface.co/microsoft/DialoGPT-small?text=Hi.
 
 ## Initial steps
 
@@ -35,6 +36,7 @@ The last step will create two `mlpackage` files in the `exported` folder: one fo
 
 - `$ python3 -m exporters.coreml --model=t5-small --feature=text2text-generation exported`
 - `$ python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill --feature=text2text-generation exported`
+- `$ python3 -m exporters.coreml --model=distilgpt2 --feature=text2text-generation exported`
 
 ## Exporters features
 

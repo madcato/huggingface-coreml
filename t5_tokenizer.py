@@ -1,6 +1,9 @@
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import T5Tokenizer, AutoModelWithLMHead, T5ForConditionalGeneration
 
-tokenizer = T5Tokenizer.from_pretrained("t5-small")
+# model_name = "t5-small"
+model_name = "shahules786/Safetybot-T5-base"
+# model_name = "osanseviero/t5-finetuned-test"
+tokenizer = T5Tokenizer.from_pretrained(model_name)
 tokens = tokenizer("Hello world how are you?", return_tensors="pt")
 print(tokens)
 
@@ -18,7 +21,7 @@ print(tokens)
 # print(words)
 
 
-model = T5ForConditionalGeneration.from_pretrained("t5-small")
+model = AutoModelWithLMHead.from_pretrained(model_name)
 outputs = model.generate(tokens)
 words = tokenizer.convert_ids_to_tokens(outputs[0])
 print(words)

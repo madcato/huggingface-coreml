@@ -1,8 +1,9 @@
 //
-//  BartTokenizer.swift
-//  huggingface-ios-app
+//  GPT2Tokenizer.swift
+//  CoreMLBert
 //
-//  Created by Daniel Vela on 12/5/23.
+//  Created by Julien Chaumond on 18/07/2019.
+//  Copyright © 2019 Hugging Face. All rights reserved.
 //
 
 import Foundation
@@ -40,13 +41,16 @@ fileprivate extension String {
     }
 }
 
-class BartTokenizer {
+
+
+
+class GPT2Tokenizer {
     fileprivate let bpeRanks: Dictionary<BytePair, Int>
     private let encoder: [String: Int]
     private let decoder: [Int: String]
     
-    init(urlMerges: URL, urlVocab: URL) throws {
-        let bpeMergesTxt = try String(contentsOf: urlMerges)
+    init(urlMerges: URL, urlVocab: URL ) throws {
+        let bpeMergesTxt = try! String(contentsOf: urlMerges)
         let arr = bpeMergesTxt.split(separator: "\n").map { String($0) }
         var bpeRanks: Dictionary<BytePair, Int> = [:]
         for i in 1..<arr.count {
@@ -56,8 +60,8 @@ class BartTokenizer {
         }
         self.bpeRanks = bpeRanks
         
-        self.encoder = try {
-            let json = try Data(contentsOf: urlVocab)
+        self.encoder = {
+            let json = try! Data(contentsOf: urlVocab)
             let decoder = JSONDecoder()
             let vocab = try! decoder.decode([String: Int].self, from: json)
             return vocab
@@ -65,20 +69,18 @@ class BartTokenizer {
         self.decoder = Utils.invert(self.encoder)
     }
     
-    static func from_pretrained(_ model_name: String, cache_dir: String? = nil) throws -> BartTokenizer {
+    static func from_pretrained(_ model_name: String, cache_dir: String? = nil) throws -> GPT2Tokenizer {
         guard let urlMerges = Bundle.main.url(forResource: model_name + "/merges", withExtension: "txt"),
               let urlVocab = Bundle.main.url(forResource: model_name + "/vocab", withExtension: "json") else {
             throw TokenizerError.invalidModelName(model_name)
         }
         
-        return try BartTokenizer(urlMerges: urlMerges, urlVocab: urlVocab)
+        return try GPT2Tokenizer(urlMerges: urlMerges, urlVocab: urlVocab)
     }
     
     func byteEncode(text: String) -> [String] {
-        let range = NSRange(location: 0, length: text.utf16.count)
-        let pattern = #"\S+\n?"#
-        let regex = try! NSRegularExpression(pattern: pattern)
-        let tokens = regex.matches(in: text, range: range).map { String(text[Range($0.range, in: text)!]) }.map { $0.lowercased() }
+        let RE = #"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"#
+        let tokens = text.ranges(of: RE).map { String(text[$0]) }
         return tokens.map { (token) -> String in
             return Array(token.utf8).map { byteEncoder[$0]! }.joined()
         }
@@ -97,68 +99,50 @@ class BartTokenizer {
     }
     
     func bpe(token: String) -> String {
-        var token = token.replacingOccurrences(of: "([.,!?()])", with: " $1", options: .regularExpression)
-        token = token.replacingOccurrences(of: "(')", with: " $1 ", options: .regularExpression)
-        token = token.replacingOccurrences(of: "\\s{2,}", with: " ", options: .regularExpression)
-        if token.contains("\n") {
-            token = token.replacingOccurrences(of: "\n", with: " __newln__")
+        if token.count <= 1 {
+            return token
         }
-
-        let tokens = token.split(separator: " ")
-        var words = [String]()
-        for token in tokens {
-            guard !token.isEmpty else {
-                continue
+        
+        var word = Array(token).map { String($0) }
+        var pairs = Array(getPairs(word: word))
+        
+        while true {
+            let bigrams = pairs.filter { (bp) -> Bool in bpeRanks[bp] != nil }
+            if bigrams.count == 0 {
+                break
             }
-            var token = token.lowercased()
-            var word = Array(token).map { String($0) }
-            word = Array(word[0..<word.count - 1]) + [word[word.count - 1] + "</w>"]
-            var pairs = getPairs(word: word)
-
-            if pairs.isEmpty {
-                words.append(token)
-                continue
-            }
-
-            while true {
-                let bigrams = pairs.filter { (bp) -> Bool in bpeRanks[bp] != nil }
-                if bigrams.count == 0 {
-                    break
-                }
-                let bigram = bigrams.min { (bp1, bp2) -> Bool in
-                    return bpeRanks[bp1]! < bpeRanks[bp2]!
-                }!
-                let first = bigram.a
-                let second = bigram.b
-                var newWord = [String]()
-                var i = 0
-
-                while i < word.count {
-                    if let j = word[i..<word.count].firstIndex(of: first) {
-                        newWord.append(contentsOf: word[i..<j])
-                        i = j
-                    } else {
-                        newWord.append(contentsOf: word[i..<word.count])
-                        break
-                    }
-
-                    if word[i] == first && i < word.count - 1 && word[i + 1] == second {
-                        newWord.append(first+second)
-                        i += 2
-                    } else {
-                        newWord.append(word[i])
-                        i += 1
-                    }
-                }
-                word = newWord
-                if word.count == 1 {
-                    break
+            let bigram = bigrams.min { (bp1, bp2) -> Bool in
+                return bpeRanks[bp1]! < bpeRanks[bp2]!
+            }!
+            let first = bigram.a
+            let second = bigram.b
+            var newWord: [String] = []
+            var i = 0
+            while i < word.count {
+                if let j = word[i..<word.count].firstIndex(of: first) {
+                    newWord.append(contentsOf: word[i..<j])
+                    i = j
                 } else {
-                    pairs = getPairs(word: word)
+                    newWord.append(contentsOf: word[i..<word.count])
+                    break
+                }
+                
+                if word[i] == first && i < word.count - 1 && word[i+1] == second {
+                    newWord.append(first+second)
+                    i += 2
+                } else {
+                    newWord.append(word[i])
+                    i += 1
                 }
             }
+            word = newWord
+            if word.count == 1 {
+                break
+            } else {
+                pairs = Array(getPairs(word: word))
+            }
         }
-        return words.joined(separator: " ")
+        return word.joined(separator: " ")
     }
     
     func tokenize(text: String) -> [String] {
@@ -177,7 +161,7 @@ class BartTokenizer {
     
     /// Decode
     func decode(tokens: [Int]) -> String {
-        let text = tokens.map { decoder[$0]! }.joined(separator: "")
+        let text = tokens.map { decoder[$0] ?? "X" }.joined(separator: "")
         let utfCodepoints = text.map { byteDecoder[String($0)]! }
         return String(decoding: utfCodepoints, as: UTF8.self)
     }

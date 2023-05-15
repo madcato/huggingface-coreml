@@ -9,16 +9,16 @@ import Foundation
 import CoreML
 
 class T5SmallModel {
-    let encoder: encoder_t5_small
-    let decoder: decoder_t5_small
+    let encoder: encoder_safetybot_t5_base
+    let decoder: decoder_safetybot_t5_base
 //    let tokenizer: BlenderbotSmallTokenizer
     let seqLen = 128
     
     init() throws {
 //        let modelName = "facebook/blenderbot-small-90M"
 //        self.tokenizer = try BlenderbotSmallTokenizer.from_pretrained(modelName)
-        self.encoder = try encoder_t5_small()
-        self.decoder = try decoder_t5_small()
+        self.encoder = try encoder_safetybot_t5_base()
+        self.decoder = try decoder_safetybot_t5_base()
     }
     
     func predict(_ string: String) throws -> String {
@@ -36,7 +36,7 @@ class T5SmallModel {
             Array(repeating: 1, count: maxTokens.count)
             , dims: 2
         )
-        let inputEncoder = encoder_t5_smallInput(input_ids: inputArray, attention_mask: maskArray)
+        let inputEncoder = encoder_safetybot_t5_baseInput(input_ids: inputArray, attention_mask: maskArray)
         
         let outputEncoder = try encoder.prediction(input: inputEncoder)
         

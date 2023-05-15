@@ -12,7 +12,7 @@ enum TokenizerError: Error {
     case invalidModelName(String)
 }
 
-struct BytePair: Hashable {
+fileprivate struct BytePair: Hashable {
     let a: String
     let b: String
     init(_ a: String, _ b: String) {
@@ -47,7 +47,7 @@ fileprivate extension String {
 
 
 class DistilGPT2Tokenizer {
-    let bpeRanks: Dictionary<BytePair, Int>
+    fileprivate let bpeRanks: Dictionary<BytePair, Int>
     private let encoder: [String: Int]
     private let decoder: [Int: String]
     
