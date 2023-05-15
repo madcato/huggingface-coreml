@@ -20,6 +20,7 @@ This repository contains a script and information to convert a Huggingface model
 -[BenderbotTokenizer doc](https://huggingface.co/docs/transformers/model_doc/blenderbot#transformers.BlenderbotTokenizer)
 - [BenderbotTokenizer implementation](https://github.com/huggingface/transformers/blob/3335724376319a0c453049d0cd883504f530ff52/src/transformers/models/blenderbot/tokenization_blenderbot.py#L4)
 - https://huggingface.co/microsoft/DialoGPT-small?text=Hi.
+- [Converting from PyTorch](https://coremltools.readme.io/docs/pytorch-conversion)
 
 ## Initial steps
 
