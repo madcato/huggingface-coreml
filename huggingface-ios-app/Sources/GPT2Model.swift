@@ -9,14 +9,14 @@ import Foundation
 import CoreML
 
 final class GPT2Model {
-    private let model: DialoGPT_small
+    private let model: distilgpt2
     private let tokenizer: GPT2Tokenizer
-    private let seqLen = 24
+    private let seqLen = 128
     
     init() throws {
         let modelName = "distilgpt2"
         self.tokenizer = try GPT2Tokenizer.from_pretrained(modelName)
-        self.model = try DialoGPT_small()
+        self.model = try distilgpt2()
     }
 
     enum DecodingStrategy {
@@ -28,7 +28,7 @@ final class GPT2Model {
         case topP(Double)
     }
 
-    private let strategy = DecodingStrategy.topK(24)
+    private let strategy = DecodingStrategy.greedy
     
     /// Main prediction loop:
     /// Predict next token from array of previous tokens.
@@ -44,34 +44,29 @@ final class GPT2Model {
         let input_ids = MLMultiArray.from(
             maxTokens + Array(repeating: 0, count: seqLen - maxTokens.count), dims: 2
         )
-        let maskArray = MLMultiArray.from(
-            Array(repeating: 1, count: maxTokens.count) + Array(repeating: 0, count: seqLen - maxTokens.count)
-            , dims: 2
+        let position_ids = MLMultiArray.from(
+            Array(0..<seqLen), dims: 2
         )
-        let input = DialoGPT_smallInput(input_ids: input_ids, attention_mask: maskArray)
-        let output = try! model.prediction(input: input)
         
-        for i in 0..<output.token_scores.shape[1].intValue {
-            let outputLogits = MLMultiArray.slice(
-                output.token_scores,
-                indexing: [.select(0), .select(i), .slice]
-            )
-            
-            switch strategy {
-            case .greedy:
-                let nextToken = Math.argmax(outputLogits)
-                print(nextToken.0)
-                return nextToken.0
-            case .topK(let k):
-                let logits = MLMultiArray.toDoubleArray(outputLogits)
-                let topk = Math.topK(arr: logits, k: k)
-                let sampleIndex = Math.sample(indexes: topk.indexes, probs: topk.probs)
-                return sampleIndex
-            case .topP(_):
-                fatalError("topP is not implemented yet")
-            }
+        let output = try! model.prediction(input_ids: input_ids, attention_mask: position_ids)
+        
+        let outputLogits = MLMultiArray.slice(
+            output.token_scores,
+            indexing: [.select(0), .select(maxTokens.count - 1), .slice]
+        )
+        
+        switch strategy {
+        case .greedy:
+            let nextToken = Math.argmax(outputLogits)
+            return nextToken.0
+        case .topK(let k):
+            let logits = MLMultiArray.toDoubleArray(outputLogits)
+            let topk = Math.topK(arr: logits, k: k)
+            let sampleIndex = Math.sample(indexes: topk.indexes, probs: topk.probs)
+            return sampleIndex
+        case .topP(_):
+            fatalError("topP is not implemented yet")
         }
-        return 0
     }
     
     

@@ -1,11 +1,12 @@
 import torch
 from transformers import AutoTokenizer
-from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM
+from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM, GPT2LMHeadModel
 
 
 # Load "microsoft/DialoGPT-small"
 # torch_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small", torchscript=True)
-torch_model = AutoModelForCausalLM.from_pretrained("facebook/blenderbot_small-90M", torchscript=True)
+# torch_model = AutoModelForCausalLM.from_pretrained("facebook/blenderbot_small-90M", torchscript=True)
+torch_model = GPT2LMHeadModel.from_pretrained("distilgpt2", torchscript=True)
 # Set the model in evaluation mode.
 torch_model.eval()
 
@@ -42,4 +43,4 @@ model = ct.convert(
  )
 
 # Save the converted model.
-model.save("exported/facebook/blenderbot_small-90M.mlpackage")
+model.save("distilgpt2.mlpackage")

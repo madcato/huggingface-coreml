@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         do {
             let model = try GPT2Model()
-            model.generate(text: "hello world. how are you?", nTokens: 16, callback: { string, double in
-                print(string + String(double))
+            model.generate(text: "Before boarding your rocket to Mars, remember to pack these items", nTokens: 16, callback: { string, double in
+                print(string)
             })
         } catch {
             print(error.localizedDescription)

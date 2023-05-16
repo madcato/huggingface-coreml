@@ -38,6 +38,8 @@
 		0BDB56E52A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */; };
 		0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EA2A0E174600415AB0 /* BartModel.swift */; };
 		0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */; };
+		0BE386C72A126D4900D98D75 /* distilgpt2-tiny-conversational.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE386C62A126D4800D98D75 /* distilgpt2-tiny-conversational.mlpackage */; };
+		0BE386C92A126F0600D98D75 /* gpt2-64-12.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE386C82A126F0600D98D75 /* gpt2-64-12.mlmodel */; };
 		0BE4DDAA2A1103F200C00F01 /* DialogGPTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDA92A1103F200C00F01 /* DialogGPTModel.swift */; };
 		0BE4DDB22A1142BA00C00F01 /* GPT2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDB12A1142BA00C00F01 /* GPT2Model.swift */; };
 		0BE4DDB72A11430D00C00F01 /* gpt2chatbotenglish in Resources */ = {isa = PBXBuildFile; fileRef = 0BE4DDB62A11430D00C00F01 /* gpt2chatbotenglish */; };
@@ -84,6 +86,8 @@
 		0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "bart-large_encoder.mlpackage"; sourceTree = "<group>"; };
 		0BDB56EA2A0E174600415AB0 /* BartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartModel.swift; sourceTree = "<group>"; };
 		0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartTokenizer.swift; sourceTree = "<group>"; };
+		0BE386C62A126D4800D98D75 /* distilgpt2-tiny-conversational.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "distilgpt2-tiny-conversational.mlpackage"; path = "../../../exported/ethzanalytics/distilgpt2-tiny-conversational.mlpackage"; sourceTree = "<group>"; };
+		0BE386C82A126F0600D98D75 /* gpt2-64-12.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "gpt2-64-12.mlmodel"; sourceTree = "<group>"; };
 		0BE4DDA92A1103F200C00F01 /* DialogGPTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogGPTModel.swift; sourceTree = "<group>"; };
 		0BE4DDAD2A1136A500C00F01 /* DialoGPT-small.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "DialoGPT-small.mlpackage"; path = "../../../exported/microsoft/DialoGPT-small.mlpackage"; sourceTree = "<group>"; };
 		0BE4DDB12A1142BA00C00F01 /* GPT2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT2Model.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */,
 				0BBD4C262A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage */,
 				0BBD4C252A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage */,
+				0BE386C62A126D4800D98D75 /* distilgpt2-tiny-conversational.mlpackage */,
+				0BE386C82A126F0600D98D75 /* gpt2-64-12.mlmodel */,
 				0BE4DDB62A11430D00C00F01 /* gpt2chatbotenglish */,
 				0BB76EDB2A0C18D2000D9187 /* distilgpt2 */,
 				0BB76ECA2A0BA673000D9187 /* facebook */,
@@ -313,8 +319,10 @@
 				0BC444A12A11884500D0EA4A /* encoder_safetybot-t5-base.mlpackage in Sources */,
 				0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */,
 				0BC444A32A11884500D0EA4A /* encoder_t5_small.mlpackage in Sources */,
+				0BE386C92A126F0600D98D75 /* gpt2-64-12.mlmodel in Sources */,
 				0BC444AA2A11884500D0EA4A /* blenderbot_small-90M_encoder.mlpackage in Sources */,
 				0BE4DDB92A1145C600C00F01 /* GPT2Tokenizer.swift in Sources */,
+				0BE386C72A126D4900D98D75 /* distilgpt2-tiny-conversational.mlpackage in Sources */,
 				0BC444A22A11884500D0EA4A /* gpt2chatbotenglish.mlpackage in Sources */,
 				0BC444A82A11884500D0EA4A /* bart-large_encoder.mlpackage in Sources */,
 				0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */,
