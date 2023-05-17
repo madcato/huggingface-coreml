@@ -8,16 +8,16 @@ class DialogGPT2CoreMLConfig(GPT2CoreMLConfig):
     @property
     def inputs(self) -> OrderedDict[str, InputDescription]:
         input_descs = super().inputs
-        input_descs["input_ids"].sequence_length = (1, -1)
+        input_descs["input_ids"].sequence_length = 64
         return input_descs
 
 feature = "text2text-generation"
 # feature = "text-generation"
 
 models = [
-        # ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig)
+        ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig)
         # ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig)
-        ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig)
+        # ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig)
     ]
 
 for model_ckpt, config_class in models:

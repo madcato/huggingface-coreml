@@ -9,14 +9,14 @@ import Foundation
 import CoreML
 
 final class GPT2Model {
-    private let model: distilgpt2
+    private let model: gpt2chatbotenglish
     private let tokenizer: GPT2Tokenizer
-    private let seqLen = 128
+    private let seqLen = 64
     
     init() throws {
         let modelName = "distilgpt2"
         self.tokenizer = try GPT2Tokenizer.from_pretrained(modelName)
-        self.model = try distilgpt2()
+        self.model = try gpt2chatbotenglish()
     }
 
     enum DecodingStrategy {
@@ -45,7 +45,7 @@ final class GPT2Model {
             maxTokens + Array(repeating: 0, count: seqLen - maxTokens.count), dims: 2
         )
         let position_ids = MLMultiArray.from(
-            Array(0..<seqLen), dims: 2
+            Array(repeating: 1, count: maxTokens.count) + Array(repeating: 0, count: seqLen - maxTokens.count ), dims: 2
         )
         
         let output = try! model.prediction(input_ids: input_ids, attention_mask: position_ids)

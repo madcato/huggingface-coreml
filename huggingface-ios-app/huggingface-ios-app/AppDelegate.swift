@@ -15,8 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         do {
+//            let model = try T5SmallModel()
+//            try model.generate(text: "Hola Mundo")
             let model = try GPT2Model()
-            model.generate(text: "Before boarding your rocket to Mars, remember to pack these items", nTokens: 16, callback: { string, double in
+            model.generate(text: "Before boarding your rocket to Mars, remember to pack these items", nTokens: 128, callback: { string, double in
                 print(string)
             })
         } catch {

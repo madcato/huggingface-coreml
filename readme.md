@@ -3,7 +3,7 @@
 This repository contains a script and information to convert a Huggingface models to CoreML.
 
 ## Info
-- Model to transform: "facebook/blenderbot-400M-distill"[Example of usage](https://huggingface.co/spaces/LamaAl/chatbot/blob/main/app.py) Try it by executing in command line `$ python3 try.py`
+- Model to transform: "gorkemgoknar/gpt2chatbotenglish"[Example of usage](https://huggingface.co/gorkemgoknar/gpt2chatbotenglish?text=Hello+there) Try it by executing in command line `$  python3 create-chatgpt-model.py`
 
 ### Links
 - [HuggingFace](https://huggingface.co/)
