@@ -7,44 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BB0CB1B2A0F93ED00348B1C /* T5SmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0CB1A2A0F93ED00348B1C /* T5SmallModel.swift */; };
+		0B124F832A15347E00868927 /* DialoGPT-small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDAD2A1136A500C00F01 /* DialoGPT-small.mlpackage */; };
 		0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8A2A0B9E6C000D9187 /* AppDelegate.swift */; };
 		0BB76E8D2A0B9E6C000D9187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8C2A0B9E6C000D9187 /* SceneDelegate.swift */; };
 		0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76E8E2A0B9E6C000D9187 /* ViewController.swift */; };
 		0BB76E922A0B9E6C000D9187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E902A0B9E6C000D9187 /* Main.storyboard */; };
 		0BB76E942A0B9E6D000D9187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E932A0B9E6D000D9187 /* Assets.xcassets */; };
 		0BB76E972A0B9E6D000D9187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76E952A0B9E6D000D9187 /* LaunchScreen.storyboard */; };
-		0BB76ECB2A0BA673000D9187 /* facebook in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76ECA2A0BA673000D9187 /* facebook */; };
 		0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ECC2A0BA68E000D9187 /* Utils.swift */; };
 		0BB76ED62A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED52A0BEDEF000D9187 /* BlenderbotTokenizerTests.swift */; };
 		0BB76EDA2A0C14D4000D9187 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED92A0C14D4000D9187 /* Math.swift */; };
 		0BB76EE02A0C190C000D9187 /* Distilgpt2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EDF2A0C190C000D9187 /* Distilgpt2Tests.swift */; };
 		0BB76EE42A0C19B7000D9187 /* DistilGPT2Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EE12A0C1941000D9187 /* DistilGPT2Tokenizer.swift */; };
 		0BB76EE52A0C1A80000D9187 /* distilgpt2 in Resources */ = {isa = PBXBuildFile; fileRef = 0BB76EDB2A0C18D2000D9187 /* distilgpt2 */; };
-		0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C292A0CBD340090AE8F /* BlenderbotSmallModel.swift */; };
 		0BBD4C2B2A0CC6F50090AE8F /* MLMultiArray+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED72A0BEF22000D9187 /* MLMultiArray+Utils.swift */; };
 		0BBD4C2C2A0CC7000090AE8F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76ED92A0C14D4000D9187 /* Math.swift */; };
-		0BC444A02A11884500D0EA4A /* decoder_safetybot-t5-base.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDBC2A1170D100C00F01 /* decoder_safetybot-t5-base.mlpackage */; };
-		0BC444A12A11884500D0EA4A /* encoder_safetybot-t5-base.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDBD2A1170D100C00F01 /* encoder_safetybot-t5-base.mlpackage */; };
-		0BC444A22A11884500D0EA4A /* gpt2chatbotenglish.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDBA2A114AA200C00F01 /* gpt2chatbotenglish.mlpackage */; };
-		0BC444A42A11884500D0EA4A /* DialoGPT-small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDAD2A1136A500C00F01 /* DialoGPT-small.mlpackage */; };
-		0BC444A52A11884500D0EA4A /* bart-large_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E62A0E172900415AB0 /* bart-large_decoder.mlpackage */; };
-		0BC444A62A11884500D0EA4A /* distilgpt2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BB76EDD2A0C18D9000D9187 /* distilgpt2.mlpackage */; };
-		0BC444A72A11884500D0EA4A /* blenderbot_small-90M_decoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C262A0CBBEB0090AE8F /* blenderbot_small-90M_decoder.mlpackage */; };
-		0BC444A82A11884500D0EA4A /* bart-large_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E72A0E172900415AB0 /* bart-large_encoder.mlpackage */; };
-		0BC444AA2A11884500D0EA4A /* blenderbot_small-90M_encoder.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD4C252A0CBBEB0090AE8F /* blenderbot_small-90M_encoder.mlpackage */; };
 		0BDB56E52A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56E42A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift */; };
-		0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EA2A0E174600415AB0 /* BartModel.swift */; };
 		0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB56EC2A0E188500415AB0 /* BartTokenizer.swift */; };
-		0BE386C72A126D4900D98D75 /* distilgpt2-tiny-conversational.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BE386C62A126D4800D98D75 /* distilgpt2-tiny-conversational.mlpackage */; };
-		0BE386C92A126F0600D98D75 /* gpt2-64-12.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE386C82A126F0600D98D75 /* gpt2-64-12.mlmodel */; };
-		0BE4DDAA2A1103F200C00F01 /* DialogGPTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDA92A1103F200C00F01 /* DialogGPTModel.swift */; };
 		0BE4DDB22A1142BA00C00F01 /* GPT2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDB12A1142BA00C00F01 /* GPT2Model.swift */; };
-		0BE4DDB72A11430D00C00F01 /* gpt2chatbotenglish in Resources */ = {isa = PBXBuildFile; fileRef = 0BE4DDB62A11430D00C00F01 /* gpt2chatbotenglish */; };
 		0BE4DDB92A1145C600C00F01 /* GPT2Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DDB82A1145C600C00F01 /* GPT2Tokenizer.swift */; };
-		0BFFAA7F2A14FE1D002BD2FA /* decoder_t5_small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFAA7D2A14FE1D002BD2FA /* decoder_t5_small.mlpackage */; };
-		0BFFAA802A14FE1D002BD2FA /* encoder_t5_small.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFAA7E2A14FE1D002BD2FA /* encoder_t5_small.mlpackage */; };
-		0BFFAA822A150760002BD2FA /* distilgpt2-64-6.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFAA812A150760002BD2FA /* distilgpt2-64-6.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +79,7 @@
 		0BFFAA7D2A14FE1D002BD2FA /* decoder_t5_small.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = decoder_t5_small.mlpackage; path = ../../../exported/decoder_t5_small.mlpackage; sourceTree = "<group>"; };
 		0BFFAA7E2A14FE1D002BD2FA /* encoder_t5_small.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = encoder_t5_small.mlpackage; path = ../../../exported/encoder_t5_small.mlpackage; sourceTree = "<group>"; };
 		0BFFAA812A150760002BD2FA /* distilgpt2-64-6.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "distilgpt2-64-6.mlmodel"; sourceTree = "<group>"; };
+		0BFFAA832A1519B1002BD2FA /* DialoGPT-medium.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = "DialoGPT-medium.mlpackage"; path = "../../../exported/microsoft/DialoGPT-medium.mlpackage"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +173,7 @@
 		0BB76EBE2A0BA424000D9187 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				0BFFAA832A1519B1002BD2FA /* DialoGPT-medium.mlpackage */,
 				0BFFAA812A150760002BD2FA /* distilgpt2-64-6.mlmodel */,
 				0BFFAA7D2A14FE1D002BD2FA /* decoder_t5_small.mlpackage */,
 				0BFFAA7E2A14FE1D002BD2FA /* encoder_t5_small.mlpackage */,
@@ -293,11 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE4DDB72A11430D00C00F01 /* gpt2chatbotenglish in Resources */,
 				0BB76E972A0B9E6D000D9187 /* LaunchScreen.storyboard in Resources */,
 				0BB76E942A0B9E6D000D9187 /* Assets.xcassets in Resources */,
 				0BB76EE52A0C1A80000D9187 /* distilgpt2 in Resources */,
-				0BB76ECB2A0BA673000D9187 /* facebook in Resources */,
 				0BB76E922A0B9E6C000D9187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,34 +297,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BDB56EB2A0E174600415AB0 /* BartModel.swift in Sources */,
 				0BDB56ED2A0E188500415AB0 /* BartTokenizer.swift in Sources */,
-				0BC444A12A11884500D0EA4A /* encoder_safetybot-t5-base.mlpackage in Sources */,
+				0B124F832A15347E00868927 /* DialoGPT-small.mlpackage in Sources */,
 				0BB76ECD2A0BA68E000D9187 /* Utils.swift in Sources */,
-				0BFFAA802A14FE1D002BD2FA /* encoder_t5_small.mlpackage in Sources */,
-				0BE386C92A126F0600D98D75 /* gpt2-64-12.mlmodel in Sources */,
-				0BFFAA822A150760002BD2FA /* distilgpt2-64-6.mlmodel in Sources */,
-				0BC444AA2A11884500D0EA4A /* blenderbot_small-90M_encoder.mlpackage in Sources */,
 				0BE4DDB92A1145C600C00F01 /* GPT2Tokenizer.swift in Sources */,
-				0BE386C72A126D4900D98D75 /* distilgpt2-tiny-conversational.mlpackage in Sources */,
-				0BC444A22A11884500D0EA4A /* gpt2chatbotenglish.mlpackage in Sources */,
-				0BC444A82A11884500D0EA4A /* bart-large_encoder.mlpackage in Sources */,
-				0BBD4C2A2A0CBD340090AE8F /* BlenderbotSmallModel.swift in Sources */,
 				0BB76E8F2A0B9E6C000D9187 /* ViewController.swift in Sources */,
-				0BC444A62A11884500D0EA4A /* distilgpt2.mlpackage in Sources */,
-				0BC444A42A11884500D0EA4A /* DialoGPT-small.mlpackage in Sources */,
 				0BBD4C2B2A0CC6F50090AE8F /* MLMultiArray+Utils.swift in Sources */,
-				0BB0CB1B2A0F93ED00348B1C /* T5SmallModel.swift in Sources */,
-				0BC444A72A11884500D0EA4A /* blenderbot_small-90M_decoder.mlpackage in Sources */,
 				0BB76EE42A0C19B7000D9187 /* DistilGPT2Tokenizer.swift in Sources */,
 				0BB76E8B2A0B9E6C000D9187 /* AppDelegate.swift in Sources */,
-				0BC444A02A11884500D0EA4A /* decoder_safetybot-t5-base.mlpackage in Sources */,
 				0BDB56E52A0CF03D00415AB0 /* BlenderbotSmallTokenizer.swift in Sources */,
 				0BE4DDB22A1142BA00C00F01 /* GPT2Model.swift in Sources */,
-				0BC444A52A11884500D0EA4A /* bart-large_decoder.mlpackage in Sources */,
-				0BFFAA7F2A14FE1D002BD2FA /* decoder_t5_small.mlpackage in Sources */,
 				0BB76E8D2A0B9E6C000D9187 /* SceneDelegate.swift in Sources */,
-				0BE4DDAA2A1103F200C00F01 /* DialogGPTModel.swift in Sources */,
 				0BBD4C2C2A0CC7000090AE8F /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

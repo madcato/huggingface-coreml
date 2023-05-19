@@ -9,14 +9,15 @@ import Foundation
 import CoreML
 
 final class GPT2Model {
-    private let model: gpt2chatbotenglish
+    private let model: DialoGPT_small
     private let tokenizer: GPT2Tokenizer
     private let seqLen = 64
+    private let eos_token_id = 50256
     
     init() throws {
         let modelName = "distilgpt2"
         self.tokenizer = try GPT2Tokenizer.from_pretrained(modelName)
-        self.model = try gpt2chatbotenglish()
+        self.model = try DialoGPT_small()
     }
 
     enum DecodingStrategy {
@@ -28,7 +29,7 @@ final class GPT2Model {
         case topP(Double)
     }
 
-    private let strategy = DecodingStrategy.greedy
+    private let strategy = DecodingStrategy.topK(2)
     
     /// Main prediction loop:
     /// Predict next token from array of previous tokens.
@@ -50,23 +51,38 @@ final class GPT2Model {
         
         let output = try! model.prediction(input_ids: input_ids, attention_mask: position_ids)
         
-        let outputLogits = MLMultiArray.slice(
-            output.token_scores,
-            indexing: [.select(0), .select(maxTokens.count - 1), .slice]
-        )
+        let outputLogits = MLMultiArray.slice_fast(output.token_scoresShapedArray, indexing: [.select(0), .select(maxTokens.count - 1), .slice])
         
         switch strategy {
         case .greedy:
-            let nextToken = Math.argmax(outputLogits)
+            let nextToken = Math.argmax32(outputLogits)
             return nextToken.0
         case .topK(let k):
-            let logits = MLMultiArray.toDoubleArray(outputLogits)
+            let logits = MLMultiArray.toFloat32Array(outputLogits)
             let topk = Math.topK(arr: logits, k: k)
             let sampleIndex = Math.sample(indexes: topk.indexes, probs: topk.probs)
             return sampleIndex
         case .topP(_):
             fatalError("topP is not implemented yet")
         }
+        
+//        let outputLogits = MLMultiArray.slice(
+//            output.token_scores,
+//            indexing: [.select(0), .select(maxTokens.count - 1), .slice]
+//        )
+//
+//        switch strategy {
+//        case .greedy:
+//            let nextToken = Math.argmax(outputLogits)
+//            return nextToken.0
+//        case .topK(let k):
+//            let logits = MLMultiArray.toDoubleArray(outputLogits)
+//            let topk = Math.topK(arr: logits, k: k)
+//            let sampleIndex = Math.sample(indexes: topk.indexes, probs: topk.probs)
+//            return sampleIndex
+//        case .topP(_):
+//            fatalError("topP is not implemented yet")
+//        }
     }
     
     
@@ -76,13 +92,16 @@ final class GPT2Model {
     /// Calls an incremental `callback` for each new token, then returns the generated string at the end.
     ///
     func generate(text: String, nTokens: Int = 10, callback: ((String, Double) -> Void)?) -> String {
-        var tokens = tokenizer.encode(text: text)
+        var tokens = tokenizer.encode(text: text) + [eos_token_id]
         var newTokens: [Int] = []
         for i in 0..<nTokens {
             let (nextToken, time) = Utils.time {
                 return predict(tokens: tokens)
             }
             
+            if nextToken == eos_token_id {  // end token
+                break
+            }
             tokens.append(nextToken)
             newTokens.append(nextToken)
             print("🦄 <\(time)s>", i, nextToken, tokens.count)

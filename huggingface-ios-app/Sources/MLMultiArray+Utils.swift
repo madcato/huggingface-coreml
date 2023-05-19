@@ -46,6 +46,16 @@ extension MLMultiArray {
         return arr
     }
     
+    /// This will concatenate all dimensions into one one-dim array.
+    static func toFloat32Array(_ o: MLMultiArray) -> [Float32] {
+        var arr: [Float32] = Array(repeating: 0, count: o.count)
+        let ptr = UnsafeMutablePointer<Float32>(OpaquePointer(o.dataPointer))
+        for i in 0..<o.count {
+            arr[i] = Float32(ptr[i])
+        }
+        return arr
+    }
+    
     /// Helper to construct a sequentially-indexed multi array,
     /// useful for debugging and unit tests
     /// Example in 3 dimensions:
@@ -75,6 +85,22 @@ extension MLMultiArray {
         case slice
     }
     
+    /// Slice an array according to a list of `Indexing` enums.
+    ///
+    /// You must specify all dimensions.
+    /// Note: only one slice is supported at the moment.
+    static func slice_fast(_ o: MLShapedArray<Float32>, indexing: [Indexing]) -> MLMultiArray {
+        let ranges = indexing.enumerated().map { (i, indexing) in
+            switch indexing {
+            case .select(let select):
+                return select..<select+1
+            case .slice:
+                return 0..<o.shape[i]
+            }
+        }
+        return MLMultiArray(o[ranges])
+    }
+        
     /// Slice an array according to a list of `Indexing` enums.
     ///
     /// You must specify all dimensions.

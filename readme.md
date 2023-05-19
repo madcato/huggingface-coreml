@@ -4,6 +4,7 @@ This repository contains a script and information to convert a Huggingface model
 
 ## Info
 - Model to transform: "gorkemgoknar/gpt2chatbotenglish"[Example of usage](https://huggingface.co/gorkemgoknar/gpt2chatbotenglish?text=Hello+there) Try it by executing in command line `$  python3 create-chatgpt-model.py`
+- Also create this [microsoft/DialoGPT-small](https://huggingface.co/microsoft/DialoGPT-small?text=Hi.)
 
 ### Links
 - [HuggingFace](https://huggingface.co/)

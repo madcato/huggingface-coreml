@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            let model = try T5SmallModel()
 //            try model.generate(text: "Hola Mundo")
             let model = try GPT2Model()
-            model.generate(text: "Before boarding your rocket to Mars, remember to pack these items", nTokens: 128, callback: { string, double in
-                print(string)
+            let result = model.generate(text: "Does money buy happiness?", nTokens: 128, callback: { string, double in
+//                print(string)
             })
+            print(result)
         } catch {
             print(error.localizedDescription)
         }

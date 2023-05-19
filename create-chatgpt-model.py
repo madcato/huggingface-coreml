@@ -15,9 +15,10 @@ feature = "text2text-generation"
 # feature = "text-generation"
 
 models = [
-        ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig)
-        # ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig)
-        # ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig)
+        ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig),
+        ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig),
+        ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig),
+        ("microsoft/DialoGPT-medium", DialogGPT2CoreMLConfig)
     ]
 
 for model_ckpt, config_class in models:

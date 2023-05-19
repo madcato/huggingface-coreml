@@ -72,7 +72,7 @@ struct Math {
     /// and return both the indices (from the original array)
     /// and their softmaxed probabilities.
     /// 
-    static func topK(arr: [Double], k: Int) -> (indexes: [Int], probs: [Float]) {
+    static func topK(arr: [Float], k: Int) -> (indexes: [Int], probs: [Float]) {
         let x = Array(arr.enumerated().map { ($0, $1) }
             .sorted(by: { a, b -> Bool in a.1 > b.1 })
             .prefix(through: min(k, arr.count) - 1))
