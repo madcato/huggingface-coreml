@@ -10,14 +10,11 @@ import CoreML
 
 class DialogGPTModel {
     let model: DialoGPT_small
-//    let tokenizer: BlenderbotSmallTokenizer
     let seqLen = 12
     
     let eos_token_id = 50256
     
     init() throws {
-//        let modelName = "facebook/blenderbot-small-90M"
-//        self.tokenizer = try BlenderbotSmallTokenizer.from_pretrained(modelName)
         self.model = try DialoGPT_small()
     }
     

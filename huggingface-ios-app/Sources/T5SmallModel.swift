@@ -11,12 +11,9 @@ import CoreML
 class T5SmallModel {
     let encoder: encoder_t5_small
     let decoder: decoder_t5_small
-//    let tokenizer: BlenderbotSmallTokenizer
     let seqLen = 64
     
     init() throws {
-//        let modelName = "facebook/blenderbot-small-90M"
-//        self.tokenizer = try BlenderbotSmallTokenizer.from_pretrained(modelName)
         self.encoder = try encoder_t5_small()
         self.decoder = try decoder_t5_small()
     }

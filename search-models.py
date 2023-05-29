@@ -7,17 +7,8 @@ feature = "text2text-generation"
 
 models = [
             # ("npc-engine/exported-bart-light-gail-chatbot", BartCoreMLConfig),  # not working
-            # ("facebook/blenderbot_small-90M",BlenderbotSmallCoreMLConfig),  # Error computing NN outputs.
-            # ("facebook/blenderbot-400M-distill",BlenderbotCoreMLConfig),  # not working
-            # ("facebook/blenderbot-3B",BlenderbotCoreMLConfig),  # Too big
-            # ("facebook/blenderbot-90M",BlenderbotCoreMLConfig),  # Error computing NN outputs.
-            # ("facebook/blenderbot-1B-distill",BlenderbotCoreMLConfig),  # There appear to be 1 leaked semaphore objects to clean up at shutdown
-            # ("hyunwoongko/blenderbot-9B",BlenderbotCoreMLConfig),  # Too big
-            #("thu-coai/blenderbot-400M-esconv",BlenderbotCoreMLConfig),  #  # There appear to be 1 leaked semaphore objects to clean up at shutdown
-            # ("thu-coai/blenderbot-1B-augesc",BlenderbotCoreMLConfig),  # Too big
-            # ("Grendar/blenderbot-400M-distill-Shiro",BlenderbotCoreMLConfig),   # There appear to be 1 leaked semaphore objects to clean up at shutdown
-    # ("shahules786/Safetybot-T5-base", T5CoreMLConfig),
-    # ("osanseviero/t5-finetuned-test", T5CoreMLConfig),
+            # ("shahules786/Safetybot-T5-base", T5CoreMLConfig),
+            # ("osanseviero/t5-finetuned-test", T5CoreMLConfig),
             # ("BlackSamorez/rudialogpt3_medium_based_on_gpt2_2ch", GPT2CoreMLConfig),  # Error coniguracion
             # ("gorkemgoknar/gpt2chatbotenglish", GPT2CoreMLConfig),  # Error coniguracion
             # ("Alethea/GPT2-chitchat", GPT2CoreMLConfig),   # Error coniguracion

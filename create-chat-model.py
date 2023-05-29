@@ -15,16 +15,18 @@ feature = "text2text-generation"
 # feature = "text-generation"
 
 models = [
-        ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig),
-        ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig),
-        ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig),
-        ("microsoft/DialoGPT-medium", DialogGPT2CoreMLConfig)
+        # ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig),
+        # ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig, AutoModelForCausalLM),
+        ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig, AutoModelForCausalLM)
+        # ("microsoft/DialoGPT-medium", DialogGPT2CoreMLConfig, AutoModelForCausalLM)
+        # ("microsoft/DialoGPT-large", DialogGPT2CoreMLConfig, AutoModelForCausalLM)
+        # ("google/flan-t5-small", T5CoreMLConfig, AutoModelForSeq2SeqLM)
     ]
 
-for model_ckpt, config_class in models:
+for model_ckpt, config_class, auto_model in models:
     print("--------------------------------")
     print(" EXPORTING: ", model_ckpt)
-    base_model = AutoModelForCausalLM.from_pretrained(
+    base_model = auto_model.from_pretrained(
         model_ckpt, torchscript=True
     )
     preprocessor = AutoTokenizer.from_pretrained(model_ckpt)

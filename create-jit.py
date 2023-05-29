@@ -5,9 +5,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM, GPT2LMHead
 
 # Load "microsoft/DialoGPT-small"
 # torch_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small", torchscript=True)
-# torch_model = AutoModelForCausalLM.from_pretrained("facebook/blenderbot_small-90M", torchscript=True)
-# torch_model = GPT2LMHeadModel.from_pretrained("distilgpt2", torchscript=True)
-torch_model = AutoModel.from_pretrained("t5-small", torchscript=True)
+torch_model = AutoModelForCausalLM.from_pretrained("facebook/blenderbot_small-90M", torchscript=True)
 # Set the model in evaluation mode.
 torch_model.eval()
 
