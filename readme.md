@@ -37,7 +37,6 @@ The last step will create two `mlpackage` files in the `exported` folder: one fo
 ### Try
 
 - `$ python3 -m exporters.coreml --model=t5-small --feature=text2text-generation exported`
-- `$ python3 -m exporters.coreml --model=facebook/blenderbot-400M-distill --feature=text2text-generation exported`
 - `$ python3 -m exporters.coreml --model=distilgpt2 --feature=text2text-generation exported`
 
 ## Exporters features
