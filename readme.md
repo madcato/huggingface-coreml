@@ -3,7 +3,7 @@
 This repository contains a script and information to convert a Huggingface models to CoreML.
 
 ## Info
-- Model to transform: "gorkemgoknar/gpt2chatbotenglish"[Example of usage](https://huggingface.co/gorkemgoknar/gpt2chatbotenglish?text=Hello+there) Try it by executing in command line `$  python3 create-chatgpt-model.py`
+- Model to transform: [microsoft/DialoGPT-small](https://huggingface.co/microsoft/DialoGPT-small?text=Hi.) Try it by executing in command line `$  python3 create-chat-model.py`
 - Also create this [microsoft/DialoGPT-small](https://huggingface.co/microsoft/DialoGPT-small?text=Hi.)
 
 ### Links

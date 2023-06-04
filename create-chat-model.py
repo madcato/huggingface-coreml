@@ -15,7 +15,6 @@ feature = "text2text-generation"
 # feature = "text-generation"
 
 models = [
-        # ("gorkemgoknar/gpt2chatbotenglish", DialogGPT2CoreMLConfig),
         # ("Alethea/GPT2-chitchat", DialogGPT2CoreMLConfig, AutoModelForCausalLM),
         ("microsoft/DialoGPT-small", DialogGPT2CoreMLConfig, AutoModelForCausalLM)
         # ("microsoft/DialoGPT-medium", DialogGPT2CoreMLConfig, AutoModelForCausalLM)
